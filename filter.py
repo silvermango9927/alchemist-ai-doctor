@@ -3,6 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity # Cosine similarity techn
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+
 df_train = pd.read_csv('training_data.csv')
 df_test = pd.read_csv('test_data.csv')
 
@@ -30,8 +31,8 @@ for i in range(len(filtered_sentence)):
                                 highestSymptom = disease_column[j]
                                 # print(f" {disease_column[j]}: {a}: {filtered_sentence[i]}")
         if highestSymptom not in symptoms: symptoms.append(highestSymptom)
-
 print(symptoms)
+# print(symptoms)
 # for i in filtered_sentence:
 #    x=TfidVectoriser().fit_transform([i])
 #    for v in disease_column:
