@@ -1,4 +1,4 @@
-from filter import a, disease_column, df_train, df_test, symptoms
+from filter import disease_column, df_train, df_test, symptoms
 from main import filtered_sentence
 import pandas as pd
 
@@ -27,4 +27,5 @@ for index, row in df_new.iterrows():
     for i in symptoms:
         if row[i.replace(' ', '_')] == 0:
             df_new = df_new[df_new.index != index]
-print(df_new)
+finalDiagnosis = list(df_new['prognosis'])
+print(finalDiagnosis)
